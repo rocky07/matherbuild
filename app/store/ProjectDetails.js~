@@ -5,12 +5,13 @@ Ext.define('Mather.store.ProjectDetails',{
 	autoLoad: true,
 		model:'Mather.model.ProjectDetails',
 		proxy:{			
-			url:'projectdetails.php',
-			type:'ajax',
+			url:'http://fullorbis.com/matherapp/projectdetails.php',
+			type:'jsonp',
 			reader:{
-				rootProperty:'data',
+				rootProperty:'record',
 				type:'json'				
-				}
+				},
+				callbackKey : 'callback'
 			}		
 		}
 	});

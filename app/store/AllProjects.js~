@@ -4,12 +4,13 @@ Ext.define('Mather.store.AllProjects',{
 	autoLoad: true,
 		model:'Mather.model.AllProjects',
 		proxy:{			
-			url:'allProjects.php',
-			type:'ajax',
+			url:'http://fullorbis.com/matherapp/allProjects.php',
+			type:'jsonp',
 			reader:{
-				//rootProperty:'data',
+				rootProperty:'record',
 				type:'json'				
-				}
+				},
+				 callbackKey : 'callback'
 			}				
 		}
 	});

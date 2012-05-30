@@ -30,7 +30,7 @@ Ext.define('Mather.controller.Main', {
     	},
     	doSendenquiry:function(){			    		
 			Ext.Ajax.request({
-  					 url: 'sendEnquiry.php',
+  					 url: 'http://fullorbis.com/matherapp/sendEnquiry.php',
     				 params: this.getEnquiryForm().getValues(),
     				 success:function(response){
      					   var text = response.responseText;     					   	

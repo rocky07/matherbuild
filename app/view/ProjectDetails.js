@@ -13,21 +13,24 @@ config:{
 				initialize:function(record){
 					//console.log(this);	
 					obj=this;					
-					Ext.Ajax.request({
-  					  url:'projectdetails.php',
+					//Ext.Ajax.request({
+						Ext.util.JSONP.request({
+  					  url:'http://fullorbis.com/matherapp/projectdetails.php',
     				  params: {
       	  						id: record.id
     								},
+    				  callbackKey : 'callback',
     				 success: function(response){
-     					   var text = response.responseText;
+     					   //var text = response.responseText;
+     					   	//console.log(response[0].location);
+     					   	//textObj=eval('('+text+')');
      					   	
-     					   	textObj=eval('('+text+')');
-     					   	obj.getActiveItem().setData(textObj[0]);
-     					   	obj.getAt(2).setData(textObj[0]);
-     					   	obj.getAt(3).setData(textObj[0]);
-     					   	obj.getAt(4).setData(textObj["gallery"]);
-     					   	obj.getAt(5).setData(textObj["floortypes"]);
-     					   	obj.getAt(6).setData(textObj[0]);
+     					   	obj.getActiveItem().setData(response[0]);
+     					   	obj.getAt(2).setData(response[0]);
+     					   	obj.getAt(3).setData(response[0]);
+     					   	obj.getAt(4).setData(response["gallery"]);
+     					   	obj.getAt(5).setData(response["floortypes"]);
+     					   	obj.getAt(6).setData(response[0]);
      					   	
      					   	//obj.getActiveItem().setHtml(textObj.description);
         							// process server response here
@@ -52,6 +55,11 @@ config:{
 			   },{
 			   iconCls:'favorites',
 			   title:'aminites',
+			   scrollable: {
+    				direction: 'vertical',
+    				directionLock: true
+					},
+				layout:'fit',
 			   tpl:['{amenities}']
 			   },
 			   {

@@ -8,7 +8,8 @@ $imageArray=$util->listGalleryImages($id);
 $floorType=$util->listFloorTypeImages($id);
 $records["gallery"]=$imageArray;
 $records["floortypes"]=$floorType;
-$result=json_encode($records);
+//$result=json_encode($records);
 //echo str_replace("\/", "/", $records);
-echo $result;
+echo $_GET['callback'].'('.json_encode($records).');' ;
+//echo $result;
 ?>

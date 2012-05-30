@@ -42,9 +42,9 @@ class Database_MySql
 		if(is_null($this->connection)){
 			//$config	=	new ConfigLoader(ROOTPATH."/configs/db.ini");
 			//$db		=	$config->getConfig("server");			
-			 $this->dbUser		=	"root";
-			 $this->dbPass		=	"root";
-			 $this->dbName		=	"mather";
+			 $this->dbUser		=	"fors1212_gq8RG3";
+			 $this->dbPass		=	"5FR9gtRB6";
+			 $this->dbName		=	"fors1212_mat92nq";
 			 $this->dbHost		=	"localhost";
 		
 			try{
