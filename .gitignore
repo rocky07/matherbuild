@@ -1,1 +1,4 @@
-/touch
+*.php
+/uploads
+todo
+my-release-key.keystore
