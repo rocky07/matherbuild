@@ -51,7 +51,7 @@ config:{
 					},
 			   //itemTpl:'ammeninitr--- {name}'
 			   //html:'asa'
-			   tpl:['<img src="uploads/project_images/{project_image}" width="100" height="100"/><br>ProjectName:{name}<br>Location:{location}<br/>Status:{project_status}<br/>Category:{category}<p>{summary}</p>']
+			   tpl:['<img src="http://fullorbis.com/matherapp/uploads/project_images/{project_image}" width="100" height="100"/><br>ProjectName:{name}<br>Location:{location}<br/>Status:{project_status}<br/>Category:{category}<p>{summary}</p>']
 			   },{
 			   iconCls:'favorites',
 			   title:'aminites',

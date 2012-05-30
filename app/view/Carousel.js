@@ -16,7 +16,7 @@ config:{
         	for(var i=0;i<dataObj.length;i++){        		
         		me.add({
      				xtype:'panel',
-     				html:'<img src="uploads/'+dataObj[i].name+'" width="200" height="150" />'
+     				html:'<img src="http://fullorbis.com/matherapp/uploads/'+dataObj[i].name+'" width="200" height="150" />'
      				})  
      			}      						
         }

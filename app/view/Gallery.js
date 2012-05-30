@@ -49,7 +49,7 @@ config:{
 	itemTpl:new Ext.XTemplate(
 	//'<div style="padding:10px 5px 5px 5px;">',
             //'<tpl for=".">',
-                '<div class="node" style="background:url(uploads/{name});">',
+                '<div class="node" style="background:url(http://fullorbis.com/matherapp/uploads/{name});">',
                 '</div>'
            // '</tpl>',
   //          '</div>'
